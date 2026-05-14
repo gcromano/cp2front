@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background-color: #111;
+    color: white;
+}
+
+.hero {
+    display: flex;
+    min-height: 100vh;
+    padding: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text,
+.hero-img {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.hero-text p {
+    margin: 20px 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.buttons a {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+}
+
+.buttons .secundario {
+    background-color: gray;
+}
+
+.hero-img img {
+    width: 100%;
+}
+
+.cards {
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.cards span,
+.cards h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.card-item {
+    width: 22%;
+    height: 460px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 1px 1px 30px #666;
+    transition: 0.5s;
+    margin-block: 20px;
+
+    animation: viewAnimation both;
+    animation-timeline: view(70% 20%);
+}
+
+.card-item:hover {
+    scale: 1.1;
+}
+
+.card-item img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+    object-position: top;
+}
+
+.card-item p {
+    width: 100%;
+}
+
+.sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
+}
+
+.sobre-text {
+    width: 65%;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 30px #666;
+    background-color: #1a1a1a;
+
+    animation: viewAnimation both;
+    animation-timeline: view(70% 20%);
+}
+
+.sobre-img {
+    width: 35%;
+}
+
+.sobre-img img {
+    width: 100%;
+
+    animation: viewAnimation both;
+    animation-timeline: view(70% 20%);
+}
+
+.sobre-text ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #000, #333);
+    color: white;
+}
+
+@media (width <= 1024px) {
+    .card-item {
+        width: 40%;
+    }
+}
+
+@media (width <= 700px) {
+    .card-item {
+        width: 80%;
+    }
+}
+
+@keyframes viewAnimation {
+    from {
+        opacity: 0;
+        transform: scale(.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
