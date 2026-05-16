@@ -39,7 +39,7 @@ body {
 
 .buttons a {
     padding: 10px 20px;
-    background-color: red;
+    background-color: rgb(2, 111, 161);
     color: white;
     text-decoration: none;
 }
